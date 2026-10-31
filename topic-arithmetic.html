@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Arithmetic (Nomad Lisp Documentation)</title>
+<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" title="Style">
+<link rel="icon" type="image/svg+xml" href="resources/logo.svg">
+<script type="text/javascript" src="resources/script.js"></script>
+</head>
+<body>
+<script type="text/javascript">applyFrames();</script>
+<div class="leftFrame">
+<div class="leftTop">
+<h1 class="bar"><a href="index.html">Nomad Lisp</a></h1>
+<div class="indexContainer">
+<h2 title="Guides">Guides</h2>
+<ul><li><a href="getting-started.html">Getting Started</a></li><li><a href="language.html">Language Guide</a></li><li><a href="examples.html">Example Programs</a></li><li><a href="reference.html">Implementer&#x27;s Reference</a></li></ul>
+<h2 title="Topics">Topics</h2>
+<ul><li><a href="topic-variables.html">Variables</a></li><li><a href="topic-functions.html">Functions</a></li><li><a href="topic-control.html">Control Flow</a></li><li><a href="topic-conditionals.html">Conditionals</a></li><li><a href="topic-arithmetic.html">Arithmetic</a></li><li><a href="topic-lists.html">Lists</a></li><li><a href="topic-strings.html">Strings</a></li><li><a href="topic-conversions.html">Conversions</a></li><li><a href="topic-records.html">Records</a></li><li><a href="topic-typechecking.html">Type Checking</a></li><li><a href="topic-macros.html">Macros</a></li><li><a href="topic-io.html">Input/Output</a></li><li><a href="topic-system.html">System</a></li></ul>
+</div>
+</div>
+<div class="leftBottom">
+<h1 class="bar">All Functions</h1>
+<div class="indexContainer">
+<ul><li><a href="topic-conditionals.html#neq"><code>!=</code></a></li><li><a href="topic-arithmetic.html#times"><code>*</code></a></li><li><a href="topic-arithmetic.html#plus"><code>+</code></a></li><li><a href="topic-arithmetic.html#minus"><code>-</code></a></li><li><a href="topic-records.html#dot"><code>.</code></a></li><li><a href="topic-arithmetic.html#divide"><code>/</code></a></li><li><a href="topic-conditionals.html#lt"><code>&lt;</code></a></li><li><a href="topic-conditionals.html#le"><code>&lt;=</code></a></li><li><a href="topic-conditionals.html#eq"><code>=</code></a></li><li><a href="topic-conditionals.html#gt"><code>&gt;</code></a></li><li><a href="topic-conditionals.html#ge"><code>&gt;=</code></a></li><li><a href="topic-conditionals.html#and"><code>and</code></a></li><li><a href="topic-lists.html#append"><code>append</code></a></li><li><a href="topic-variables.html#args"><code>args</code></a></li><li><a href="topic-lists.html#begins_with"><code>begins_with</code></a></li><li><a href="topic-system.html#bye"><code>bye</code></a></li><li><a href="topic-lists.html#car"><code>car</code></a></li><li><a href="topic-lists.html#cdr"><code>cdr</code></a></li><li><a href="topic-strings.html#chars"><code>chars</code></a></li><li><a href="topic-system.html#chdir"><code>chdir</code></a></li><li><a href="topic-lists.html#cons"><code>cons</code></a></li><li><a href="topic-system.html#cwd"><code>cwd</code></a></li><li><a href="topic-arithmetic.html#dec"><code>dec</code></a></li><li><a href="topic-control.html#do"><code>do</code></a></li><li><a href="topic-lists.html#ends_with"><code>ends_with</code></a></li><li><a href="topic-system.html#exec"><code>exec</code></a></li><li><a href="topic-system.html#exit"><code>exit</code></a></li><li><a href="topic-lists.html#filter"><code>filter</code></a></li><li><a href="topic-lists.html#foldl"><code>foldl</code></a></li><li><a href="topic-lists.html#foreach"><code>foreach</code></a></li><li><a href="topic-lists.html#foreachi"><code>foreachi</code></a></li><li><a href="topic-system.html#get_env"><code>get_env</code></a></li><li><a href="topic-system.html#get_env_unit"><code>get_env_unit</code></a></li><li><a href="topic-strings.html#has_prefix"><code>has_prefix</code></a></li><li><a href="topic-strings.html#has_suffix"><code>has_suffix</code></a></li><li><a href="topic-control.html#if"><code>if</code></a></li><li><a href="topic-arithmetic.html#inc"><code>inc</code></a></li><li><a href="topic-system.html#include"><code>include</code></a></li><li><a href="topic-typechecking.html#isbool"><code>isbool</code></a></li><li><a href="topic-typechecking.html#isfun"><code>isfun</code></a></li><li><a href="topic-typechecking.html#islist"><code>islist</code></a></li><li><a href="topic-typechecking.html#ismac"><code>ismac</code></a></li><li><a href="topic-typechecking.html#isnative"><code>isnative</code></a></li><li><a href="topic-typechecking.html#isnum"><code>isnum</code></a></li><li><a href="topic-typechecking.html#isrecord"><code>isrecord</code></a></li><li><a href="topic-typechecking.html#isstr"><code>isstr</code></a></li><li><a href="topic-typechecking.html#isunit"><code>isunit</code></a></li><li><a href="topic-functions.html#lambda"><code>lambda</code></a></li><li><a href="topic-lists.html#len"><code>len</code></a></li><li><a href="topic-variables.html#let"><code>let</code></a></li><li><a href="topic-functions.html#letfun"><code>letfun</code></a></li><li><a href="topic-macros.html#letmac"><code>letmac</code></a></li><li><a href="topic-lists.html#list"><code>list</code></a></li><li><a href="topic-lists.html#list_init"><code>list_init</code></a></li><li><a href="topic-strings.html#lower"><code>lower</code></a></li><li><a href="topic-lists.html#map"><code>map</code></a></li><li><a href="topic-lists.html#mapi"><code>mapi</code></a></li><li><a href="topic-io.html#mkdir"><code>mkdir</code></a></li><li><a href="topic-arithmetic.html#mod"><code>mod</code></a></li><li><a href="topic-variables.html#mut"><code>mut</code></a></li><li><a href="topic-conditionals.html#not"><code>not</code></a></li><li><a href="topic-lists.html#nth"><code>nth</code></a></li><li><a href="topic-lists.html#nth_unit"><code>nth_unit</code></a></li><li><a href="topic-conditionals.html#or"><code>or</code></a></li><li><a href="topic-io.html#print"><code>print</code></a></li><li><a href="topic-system.html#print_env"><code>print_env</code></a></li><li><a href="topic-io.html#println"><code>println</code></a></li><li><a href="topic-lists.html#range"><code>range</code></a></li><li><a href="topic-io.html#read_dir"><code>read_dir</code></a></li><li><a href="topic-io.html#read_file"><code>read_file</code></a></li><li><a href="topic-io.html#readln"><code>readln</code></a></li><li><a href="topic-records.html#record"><code>record</code></a></li><li><a href="topic-records.html#record_mut"><code>record_mut</code></a></li><li><a href="topic-io.html#remove_dir"><code>remove_dir</code></a></li><li><a href="topic-io.html#remove_file"><code>remove_file</code></a></li><li><a href="topic-lists.html#rev"><code>rev</code></a></li><li><a href="topic-variables.html#scoped"><code>scoped</code></a></li><li><a href="topic-strings.html#splitws"><code>splitws</code></a></li><li><a href="topic-strings.html#sprint"><code>sprint</code></a></li><li><a href="topic-conversions.html#string_to_num"><code>string_to_num</code></a></li><li><a href="topic-strings.html#strlen"><code>strlen</code></a></li><li><a href="topic-control.html#switch"><code>switch</code></a></li><li><a href="topic-control.html#throw"><code>throw</code></a></li><li><a href="topic-conversions.html#to_string"><code>to_string</code></a></li><li><a href="topic-strings.html#trim"><code>trim</code></a></li><li><a href="topic-control.html#try"><code>try</code></a></li><li><a href="topic-typechecking.html#typeof"><code>typeof</code></a></li><li><a href="topic-control.html#unless"><code>unless</code></a></li><li><a href="topic-control.html#when"><code>when</code></a></li><li><a href="topic-io.html#write_file"><code>write_file</code></a></li></ul>
+</div>
+</div>
+</div>
+<div class="rightFrame">
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<a name="navbar.top"><!-- --></a>
+<div class="topNav">
+<ul class="navList" title="Navigation"><li><a href="index.html">Overview</a></li><li class="navBarCell1Rev">Topic</li><li><a href="index-all.html">Index</a></li><li><a href="help.html">Help</a></li></ul>
+<div class="aboveNav"><strong>Nomad Lisp</strong><br>Standard Library</div>
+</div>
+<div class="subNav">
+<ul class="navList"><li><a href="topic-conditionals.html"><span class="typeNameLink">Prev&nbsp;Topic</span></a></li><li><a href="topic-lists.html"><span class="typeNameLink">Next&nbsp;Topic</span></a></li></ul>
+<ul class="navList"><li><a href="#" class="framesToggle">Frames</a></li><li><a href="#" class="noFramesToggle">No&nbsp;Frames</a></li></ul>
+<div><ul class="subNavList"><li>Summary:&nbsp;</li><li><a href="#function.summary">Function</a></li></ul>
+<ul class="subNavList"><li>Detail:&nbsp;</li><li><a href="#function.detail">Function</a></li></ul></div>
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF TOPIC DATA ======== -->
+<div class="header">
+<div class="subTitle">nomad.lang</div>
+<h2 title="Topic Arithmetic" class="title">Topic Arithmetic</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<div class="block"><p>Arithmetic on numbers, with limited support for strings.</p></div>
+<div class="block"><p>All numbers in Nomad Lisp are 64-bit floating point numbers. Numbers without a fractional part are printed as integers. All arithmetic functions take exactly two operands.</p></div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== FUNCTION SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="function.summary"><!-- --></a>
+<h3>Function Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Functions table, listing functions, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span><a href="javascript:show(0);">All Functions</a></span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Native Functions</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Prelude Functions</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr><th class="colFirst" scope="col">Kind</th><th class="colLast" scope="col">Function and Description</th></tr>
+<tr class="altColor" data-kind="1"><td class="colFirst"><code>native</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#plus">+</a></span></code><br><code class="sig">(+ &lt;lhs&gt; &lt;rhs&gt;)</code><div class="block">Adds two numbers or concatenates two strings.</div></td></tr><tr class="rowColor" data-kind="1"><td class="colFirst"><code>native</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#minus">-</a></span></code><br><code class="sig">(- &lt;lhs&gt; &lt;rhs&gt;)</code><div class="block">Subtracts <code>rhs</code> from <code>lhs</code>.</div></td></tr><tr class="altColor" data-kind="1"><td class="colFirst"><code>native</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#times">*</a></span></code><br><code class="sig">(* &lt;lhs&gt; &lt;rhs&gt;)</code><div class="block">Multiplies two numbers, or repeats a string.</div></td></tr><tr class="rowColor" data-kind="1"><td class="colFirst"><code>native</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#divide">/</a></span></code><br><code class="sig">(/ &lt;lhs&gt; &lt;rhs&gt;)</code><div class="block">Divides <code>lhs</code> by <code>rhs</code>.</div></td></tr><tr class="altColor" data-kind="1"><td class="colFirst"><code>native</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#mod">mod</a></span></code><br><code class="sig">(mod &lt;lhs&gt; &lt;rhs&gt;)</code><div class="block">Computes the remainder of dividing <code>lhs</code> by <code>rhs</code>.</div></td></tr><tr class="rowColor" data-kind="2"><td class="colFirst"><code>prelude</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#inc">inc</a></span></code><br><code class="sig">(inc &lt;x&gt;)</code><div class="block">Returns <code>x</code> incremented by one.</div></td></tr><tr class="altColor" data-kind="2"><td class="colFirst"><code>prelude</code></td><td class="colLast"><code><span class="memberNameLink"><a href="#dec">dec</a></span></code><br><code class="sig">(dec &lt;x&gt;)</code><div class="block">Returns <code>x</code> decremented by one.</div></td></tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FUNCTION DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="function.detail"><!-- --></a>
+<h3>Function Detail</h3>
+<a name="plus"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>+</h4>
+<pre>(+ &lt;lhs&gt; &lt;rhs&gt;)</pre>
+<div class="block"><p>Adds two numbers or concatenates two strings.</p></div>
+
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented natively by the interpreter.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number | string</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if the operands are not both numbers or both strings</dd>
+<dt><span class="exampleLabel">Example:</span></dt><dd><pre class="codeBlock">(+ 1 2) # 3
+(+ &quot;Hello, &quot; &quot;World&quot;) # &quot;Hello, World&quot;</pre></dd>
+</dl>
+</li>
+</ul><a name="minus"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>-</h4>
+<pre>(- &lt;lhs&gt; &lt;rhs&gt;)</pre>
+<div class="block"><p>Subtracts <code>rhs</code> from <code>lhs</code>.</p></div>
+
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented natively by the interpreter.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if either operand is not a <code>number</code></dd>
+
+</dl>
+</li>
+</ul><a name="times"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>*</h4>
+<pre>(* &lt;lhs&gt; &lt;rhs&gt;)</pre>
+<div class="block"><p>Multiplies two numbers, or repeats a string.</p></div>
+<div class="block"><p>If one operand is a string and the other a number, the string is repeated that many times. The number is truncated to an integer; values below 1 yield the empty string.</p></div>
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented natively by the interpreter.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number | string</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if the operands are of any other combination of types</dd>
+<dt><span class="exampleLabel">Example:</span></dt><dd><pre class="codeBlock">(* 9 9) # 81
+(* 2 &quot;Hello &quot;) # &quot;Hello Hello &quot;
+(* &quot;Hello &quot; 2) # &quot;Hello Hello &quot;</pre></dd>
+</dl>
+</li>
+</ul><a name="divide"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>/</h4>
+<pre>(/ &lt;lhs&gt; &lt;rhs&gt;)</pre>
+<div class="block"><p>Divides <code>lhs</code> by <code>rhs</code>.</p></div>
+
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented natively by the interpreter.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if either operand is not a <code>number</code>, or if <code>rhs</code> is 0</dd>
+
+</dl>
+</li>
+</ul><a name="mod"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mod</h4>
+<pre>(mod &lt;lhs&gt; &lt;rhs&gt;)</pre>
+<div class="block"><p>Computes the remainder of dividing <code>lhs</code> by <code>rhs</code>.</p></div>
+<div class="block"><p>The result has the same sign as <code>lhs</code>.</p></div>
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented natively by the interpreter.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if either operand is not a <code>number</code></dd>
+<dt><span class="exampleLabel">Example:</span></dt><dd><pre class="codeBlock">(mod 10 3) # 1</pre></dd>
+</dl>
+</li>
+</ul><a name="inc"><!-- --></a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inc</h4>
+<pre>(inc &lt;x&gt;)</pre>
+<div class="block"><p>Returns <code>x</code> incremented by one.</p></div>
+
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented in Nomad Lisp as part of the prelude.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if <code>x</code> is not a <code>number</code></dd>
+
+</dl>
+</li>
+</ul><a name="dec"><!-- --></a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dec</h4>
+<pre>(dec &lt;x&gt;)</pre>
+<div class="block"><p>Returns <code>x</code> decremented by one.</p></div>
+
+<dl>
+<dt><span class="kindLabel">Kind:</span></dt><dd>Implemented in Nomad Lisp as part of the prelude.</dd><dt><span class="returnLabel">Returns:</span></dt><dd><code>number</code></dd><dt><span class="throwsLabel">Throws:</span></dt><dd><code>EvaluationError</code> - if <code>x</code> is not a <code>number</code></dd>
+
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF TOPIC DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+<ul class="navList" title="Navigation">
+<li><a href="index.html">Overview</a></li>
+<li>Topic</li>
+<li><a href="index-all.html">Index</a></li>
+<li><a href="help.html">Help</a></li>
+</ul>
+<div class="aboveNav"><strong>Nomad Lisp</strong><br>Standard Library</div>
+</div>
+<p class="legalCopy"><small><a href="https://github.com/shawarma10/nomad-lisp/issues">Submit a bug or feature</a><br>
+For further reference and examples, see the <a href="https://github.com/shawarma10/nomad-lisp">Nomad Lisp source repository</a>.<br>
+Copyright &copy; 2026 shawarma10. Licensed under the <a href="https://github.com/shawarma10/nomad-lisp/blob/main/LICENSE">MIT License</a>.</small></p>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>
+</body>
+</html>

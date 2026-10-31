@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example Programs (Nomad Lisp Documentation)</title>
+<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" title="Style">
+<link rel="icon" type="image/svg+xml" href="resources/logo.svg">
+<script type="text/javascript" src="resources/script.js"></script>
+</head>
+<body>
+<script type="text/javascript">applyFrames();</script>
+<div class="leftFrame">
+<div class="leftTop">
+<h1 class="bar"><a href="index.html">Nomad Lisp</a></h1>
+<div class="indexContainer">
+<h2 title="Guides">Guides</h2>
+<ul><li><a href="getting-started.html">Getting Started</a></li><li><a href="language.html">Language Guide</a></li><li><a href="examples.html">Example Programs</a></li><li><a href="reference.html">Implementer&#x27;s Reference</a></li></ul>
+<h2 title="Topics">Topics</h2>
+<ul><li><a href="topic-variables.html">Variables</a></li><li><a href="topic-functions.html">Functions</a></li><li><a href="topic-control.html">Control Flow</a></li><li><a href="topic-conditionals.html">Conditionals</a></li><li><a href="topic-arithmetic.html">Arithmetic</a></li><li><a href="topic-lists.html">Lists</a></li><li><a href="topic-strings.html">Strings</a></li><li><a href="topic-conversions.html">Conversions</a></li><li><a href="topic-records.html">Records</a></li><li><a href="topic-typechecking.html">Type Checking</a></li><li><a href="topic-macros.html">Macros</a></li><li><a href="topic-io.html">Input/Output</a></li><li><a href="topic-system.html">System</a></li></ul>
+</div>
+</div>
+<div class="leftBottom">
+<h1 class="bar">All Functions</h1>
+<div class="indexContainer">
+<ul><li><a href="topic-conditionals.html#neq"><code>!=</code></a></li><li><a href="topic-arithmetic.html#times"><code>*</code></a></li><li><a href="topic-arithmetic.html#plus"><code>+</code></a></li><li><a href="topic-arithmetic.html#minus"><code>-</code></a></li><li><a href="topic-records.html#dot"><code>.</code></a></li><li><a href="topic-arithmetic.html#divide"><code>/</code></a></li><li><a href="topic-conditionals.html#lt"><code>&lt;</code></a></li><li><a href="topic-conditionals.html#le"><code>&lt;=</code></a></li><li><a href="topic-conditionals.html#eq"><code>=</code></a></li><li><a href="topic-conditionals.html#gt"><code>&gt;</code></a></li><li><a href="topic-conditionals.html#ge"><code>&gt;=</code></a></li><li><a href="topic-conditionals.html#and"><code>and</code></a></li><li><a href="topic-lists.html#append"><code>append</code></a></li><li><a href="topic-variables.html#args"><code>args</code></a></li><li><a href="topic-lists.html#begins_with"><code>begins_with</code></a></li><li><a href="topic-system.html#bye"><code>bye</code></a></li><li><a href="topic-lists.html#car"><code>car</code></a></li><li><a href="topic-lists.html#cdr"><code>cdr</code></a></li><li><a href="topic-strings.html#chars"><code>chars</code></a></li><li><a href="topic-system.html#chdir"><code>chdir</code></a></li><li><a href="topic-lists.html#cons"><code>cons</code></a></li><li><a href="topic-system.html#cwd"><code>cwd</code></a></li><li><a href="topic-arithmetic.html#dec"><code>dec</code></a></li><li><a href="topic-control.html#do"><code>do</code></a></li><li><a href="topic-lists.html#ends_with"><code>ends_with</code></a></li><li><a href="topic-system.html#exec"><code>exec</code></a></li><li><a href="topic-system.html#exit"><code>exit</code></a></li><li><a href="topic-lists.html#filter"><code>filter</code></a></li><li><a href="topic-lists.html#foldl"><code>foldl</code></a></li><li><a href="topic-lists.html#foreach"><code>foreach</code></a></li><li><a href="topic-lists.html#foreachi"><code>foreachi</code></a></li><li><a href="topic-system.html#get_env"><code>get_env</code></a></li><li><a href="topic-system.html#get_env_unit"><code>get_env_unit</code></a></li><li><a href="topic-strings.html#has_prefix"><code>has_prefix</code></a></li><li><a href="topic-strings.html#has_suffix"><code>has_suffix</code></a></li><li><a href="topic-control.html#if"><code>if</code></a></li><li><a href="topic-arithmetic.html#inc"><code>inc</code></a></li><li><a href="topic-system.html#include"><code>include</code></a></li><li><a href="topic-typechecking.html#isbool"><code>isbool</code></a></li><li><a href="topic-typechecking.html#isfun"><code>isfun</code></a></li><li><a href="topic-typechecking.html#islist"><code>islist</code></a></li><li><a href="topic-typechecking.html#ismac"><code>ismac</code></a></li><li><a href="topic-typechecking.html#isnative"><code>isnative</code></a></li><li><a href="topic-typechecking.html#isnum"><code>isnum</code></a></li><li><a href="topic-typechecking.html#isrecord"><code>isrecord</code></a></li><li><a href="topic-typechecking.html#isstr"><code>isstr</code></a></li><li><a href="topic-typechecking.html#isunit"><code>isunit</code></a></li><li><a href="topic-functions.html#lambda"><code>lambda</code></a></li><li><a href="topic-lists.html#len"><code>len</code></a></li><li><a href="topic-variables.html#let"><code>let</code></a></li><li><a href="topic-functions.html#letfun"><code>letfun</code></a></li><li><a href="topic-macros.html#letmac"><code>letmac</code></a></li><li><a href="topic-lists.html#list"><code>list</code></a></li><li><a href="topic-lists.html#list_init"><code>list_init</code></a></li><li><a href="topic-strings.html#lower"><code>lower</code></a></li><li><a href="topic-lists.html#map"><code>map</code></a></li><li><a href="topic-lists.html#mapi"><code>mapi</code></a></li><li><a href="topic-io.html#mkdir"><code>mkdir</code></a></li><li><a href="topic-arithmetic.html#mod"><code>mod</code></a></li><li><a href="topic-variables.html#mut"><code>mut</code></a></li><li><a href="topic-conditionals.html#not"><code>not</code></a></li><li><a href="topic-lists.html#nth"><code>nth</code></a></li><li><a href="topic-lists.html#nth_unit"><code>nth_unit</code></a></li><li><a href="topic-conditionals.html#or"><code>or</code></a></li><li><a href="topic-io.html#print"><code>print</code></a></li><li><a href="topic-system.html#print_env"><code>print_env</code></a></li><li><a href="topic-io.html#println"><code>println</code></a></li><li><a href="topic-lists.html#range"><code>range</code></a></li><li><a href="topic-io.html#read_dir"><code>read_dir</code></a></li><li><a href="topic-io.html#read_file"><code>read_file</code></a></li><li><a href="topic-io.html#readln"><code>readln</code></a></li><li><a href="topic-records.html#record"><code>record</code></a></li><li><a href="topic-records.html#record_mut"><code>record_mut</code></a></li><li><a href="topic-io.html#remove_dir"><code>remove_dir</code></a></li><li><a href="topic-io.html#remove_file"><code>remove_file</code></a></li><li><a href="topic-lists.html#rev"><code>rev</code></a></li><li><a href="topic-variables.html#scoped"><code>scoped</code></a></li><li><a href="topic-strings.html#splitws"><code>splitws</code></a></li><li><a href="topic-strings.html#sprint"><code>sprint</code></a></li><li><a href="topic-conversions.html#string_to_num"><code>string_to_num</code></a></li><li><a href="topic-strings.html#strlen"><code>strlen</code></a></li><li><a href="topic-control.html#switch"><code>switch</code></a></li><li><a href="topic-control.html#throw"><code>throw</code></a></li><li><a href="topic-conversions.html#to_string"><code>to_string</code></a></li><li><a href="topic-strings.html#trim"><code>trim</code></a></li><li><a href="topic-control.html#try"><code>try</code></a></li><li><a href="topic-typechecking.html#typeof"><code>typeof</code></a></li><li><a href="topic-control.html#unless"><code>unless</code></a></li><li><a href="topic-control.html#when"><code>when</code></a></li><li><a href="topic-io.html#write_file"><code>write_file</code></a></li></ul>
+</div>
+</div>
+</div>
+<div class="rightFrame">
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<a name="navbar.top"><!-- --></a>
+<div class="topNav">
+<ul class="navList" title="Navigation"><li><a href="index.html">Overview</a></li><li>Topic</li><li><a href="index-all.html">Index</a></li><li><a href="help.html">Help</a></li></ul>
+<div class="aboveNav"><strong>Nomad Lisp</strong><br>Standard Library</div>
+</div>
+<div class="subNav">
+<ul class="navList"></ul>
+<ul class="navList"><li><a href="#" class="framesToggle">Frames</a></li><li><a href="#" class="noFramesToggle">No&nbsp;Frames</a></li></ul>
+
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<div class="subTitle">Guide</div>
+<h1 class="title">Example Programs</h1>
+<div class="block">Short programs that demonstrate the language.</div>
+</div>
+<div class="contentContainer guide">
+<div class="block"><p>More examples are available in the <a href="https://github.com/shawarma10/nomad-lisp/tree/main/examples">examples directory</a> of the repository.</p></div>
+<h3 class="sectionHeader">Fibonacci</h3>
+<pre class="codeBlock">(letfun fib (n)
+  (switch n
+    (0 0)
+    (1 1)
+    (_ (+ (fib (dec n)) (fib (- n 2))))))
+
+(println (fib 20))</pre>
+<h3 class="sectionHeader">Factorial</h3>
+<pre class="codeBlock">(letfun fact (n)
+  (switch n
+    (0 1)
+    (_ (* n (fact (dec n))))))
+
+(println (fact 10))</pre>
+<h3 class="sectionHeader">Closures and currying</h3>
+<pre class="codeBlock">(let add
+  (lambda (x)
+    (lambda (y)
+      (+ x y))))
+
+(let add10 (add 10))
+(let x (add10 20))
+(println &quot;x = &quot; x)
+(if (= x 30)
+  (println &quot;All good! Closures work as expected.&quot;)
+  (println &quot;Uh oh, Closures do not work as expected!&quot;))</pre>
+<h3 class="sectionHeader">A quiz</h3>
+<pre class="codeBlock">(letfun input_loop (correct_answer prompt)
+  (if (= correct_answer (readln prompt))
+    (println &quot;Correct!&quot;)
+    (do
+      (println &quot;False!\nTry again!&quot;)
+      (input_loop correct_answer prompt))))
+
+(input_loop &quot;berlin&quot; &quot;What is the capital of Germany? &quot;)
+(input_loop &quot;ocaml&quot; &quot;What language is Nomad Lisp written in? &quot;)
+(println &quot;All questions answered correctly!&quot;)</pre>
+<h3 class="sectionHeader">Records</h3>
+<pre class="codeBlock">(let person
+  (record
+    (name &quot;John Doe&quot;)
+    (age 22)
+    (job &quot;Electrician&quot;)))
+
+(println (. person name) &quot; is &quot; (. person age) &quot; years old&quot;)</pre>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+<ul class="navList" title="Navigation">
+<li><a href="index.html">Overview</a></li>
+<li>Topic</li>
+<li><a href="index-all.html">Index</a></li>
+<li><a href="help.html">Help</a></li>
+</ul>
+<div class="aboveNav"><strong>Nomad Lisp</strong><br>Standard Library</div>
+</div>
+<p class="legalCopy"><small><a href="https://github.com/shawarma10/nomad-lisp/issues">Submit a bug or feature</a><br>
+For further reference and examples, see the <a href="https://github.com/shawarma10/nomad-lisp">Nomad Lisp source repository</a>.<br>
+Copyright &copy; 2026 shawarma10. Licensed under the <a href="https://github.com/shawarma10/nomad-lisp/blob/main/LICENSE">MIT License</a>.</small></p>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</div>
+</body>
+</html>

@@ -1,0 +1,485 @@
+/* Nomad Lisp documentation style sheet */
+
+/*
+Overall document style
+*/
+body {
+    background-color:#ffffff;
+    color:#353833;
+    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size:14px;
+    margin:0;
+}
+a:link, a:visited {
+    text-decoration:none;
+    color:#4A6782;
+}
+a:hover, a:focus {
+    text-decoration:none;
+    color:#bb7a2a;
+}
+a[name] {
+    color:#353833;
+}
+pre {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+}
+h1 { font-size:20px; }
+h2 { font-size:18px; }
+h3 { font-size:16px; font-style:italic; }
+h4 { font-size:13px; }
+ul { list-style-type:disc; }
+code, tt {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    padding-top:4px;
+    margin-top:8px;
+    line-height:1.4em;
+}
+dt code {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    padding-top:4px;
+}
+table tr td dt code {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    vertical-align:top;
+    padding-top:4px;
+}
+sup { font-size:8px; }
+
+/*
+Frame layout
+*/
+.leftFrame {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    width:20%;
+    min-width:190px;
+    border-right:4px solid #bbbbbb;
+    background-color:#ffffff;
+    font-size:12px;
+}
+.leftTop {
+    height:40%;
+    overflow:auto;
+    border-bottom:4px solid #bbbbbb;
+}
+.leftBottom {
+    height:calc(60% - 4px);
+    overflow:auto;
+}
+.rightFrame {
+    margin-left:calc(20% + 4px);
+    min-width:500px;
+}
+body.noFrames .leftFrame { display:none; }
+body.noFrames .rightFrame { margin-left:0; }
+.bar a:link, .bar a:visited, .bar a:active {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.bar {
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    padding:.8em .5em .4em .8em;
+    height:auto;
+    font-size:11px;
+    margin:0;
+}
+.indexContainer {
+    margin:10px;
+    position:relative;
+    font-size:12px;
+}
+.indexContainer h2 {
+    font-size:13px;
+    padding:0 0 3px 0;
+    margin:12px 0 4px 0;
+}
+.indexContainer ul {
+    margin:0;
+    padding:0;
+}
+.indexContainer ul li {
+    list-style:none;
+    padding-top:2px;
+}
+.indexContainer ul li code {
+    font-size:12px;
+    padding:0;
+    margin:0;
+}
+
+/*
+Navigation bar styles
+*/
+.topNav {
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    float:left;
+    padding:0;
+    width:100%;
+    clear:right;
+    height:2.8em;
+    padding-top:10px;
+    overflow:hidden;
+    font-size:12px;
+}
+.bottomNav {
+    margin-top:10px;
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    float:left;
+    padding:0;
+    width:100%;
+    clear:right;
+    height:2.8em;
+    padding-top:10px;
+    overflow:hidden;
+    font-size:12px;
+}
+.subNav {
+    background-color:#dee3e9;
+    float:left;
+    width:100%;
+    overflow:hidden;
+    font-size:12px;
+}
+.subNav div {
+    clear:left;
+    float:left;
+    padding:0 0 5px 6px;
+    text-transform:uppercase;
+}
+ul.navList, ul.subNavList {
+    float:left;
+    margin:0 25px 0 0;
+    padding:0;
+}
+ul.navList li {
+    list-style:none;
+    float:left;
+    padding:5px 6px;
+    text-transform:uppercase;
+}
+ul.subNavList li {
+    list-style:none;
+    float:left;
+}
+.topNav a:link, .topNav a:active, .topNav a:visited,
+.bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
+    color:#FFFFFF;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.topNav a:hover, .bottomNav a:hover {
+    text-decoration:none;
+    color:#bb7a2a;
+    text-transform:uppercase;
+}
+.navBarCell1Rev {
+    background-color:#F8981D;
+    color:#253441;
+    margin:auto 5px;
+}
+.aboveNav {
+    float:right;
+    padding:0 20px 0 0;
+    margin-top:-6px;
+    font-size:11px;
+    text-align:right;
+    line-height:1.3em;
+}
+body.noFrames .framesToggle, body:not(.noFrames) .noFramesToggle { font-weight:normal; }
+body.noFrames .noFramesToggle, body:not(.noFrames) .framesToggle { font-weight:bold; color:#353833; }
+
+/*
+Page header and body styles
+*/
+.header {
+    clear:both;
+    margin:0 20px;
+    padding:5px 0 0 0;
+}
+.header .logo {
+    float:left;
+    margin:6px 14px 6px 0;
+}
+.title {
+    color:#2c4557;
+    margin:10px 0;
+}
+.header h1.title { padding-top:12px; }
+.subTitle {
+    margin:5px 0 0 0;
+}
+.header ul {
+    margin:0 0 15px 0;
+    padding:0;
+}
+.contentContainer {
+    clear:both;
+    padding:10px 20px;
+    position:relative;
+}
+.contentContainer .description dl dt, .contentContainer .details dl dt {
+    font-size:12px;
+    font-weight:bold;
+    margin:10px 0 0 0;
+    color:#4E4E4E;
+}
+.contentContainer .description dl dd, .contentContainer .details dl dd {
+    margin:5px 0 10px 0;
+    font-size:14px;
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+}
+.legalCopy {
+    margin-left:.5em;
+    clear:both;
+    padding-top:6px;
+}
+.contentContainer > dl dt { margin-top:8px; }
+.contentContainer > dl dd { margin-left:2.5em; }
+
+/*
+List styles
+*/
+ul.blockList, ul.blockListLast {
+    margin:10px 0 10px 0;
+    padding:0;
+}
+ul.blockList li.blockList, ul.blockListLast li.blockList {
+    list-style:none;
+    margin-bottom:15px;
+    line-height:1.4;
+}
+ul.blockList ul.blockList li.blockList, ul.blockList ul.blockListLast li.blockList {
+    padding:0px 20px 5px 10px;
+    border:1px solid #ededed;
+    background-color:#f8f8f8;
+}
+ul.blockList ul.blockList ul.blockList li.blockList, ul.blockList ul.blockList ul.blockListLast li.blockList {
+    padding:0 0 5px 8px;
+    background-color:#ffffff;
+    border:none;
+}
+ul.blockList ul.blockList li.blockList h3 {
+    background-color:#dee3e9;
+    border:1px solid #d0d9e0;
+    margin:0 0 6px -8px;
+    padding:7px 5px;
+}
+ul.blockList ul.blockList ul.blockList li.blockList h4,
+ul.blockList ul.blockList ul.blockListLast li.blockList h4 {
+    font-size:14px;
+    margin:14px 0 4px 0;
+}
+ul.blockList ul.blockList ul.blockList li.blockList pre,
+ul.blockList ul.blockList ul.blockListLast li.blockList pre {
+    margin:4px 0 8px 0;
+}
+ul.blockList ul.blockList ul.blockList,
+ul.blockList ul.blockList ul.blockListLast {
+    border-bottom:1px solid #e3e3e3;
+    margin:0 0 0 0;
+}
+ul.blockList ul.blockList ul.blockListLast { border-bottom:none; }
+ul.blockList li.blockList h2 {
+    padding:0px 0 20px 0;
+}
+.description ul.blockList li.blockList {
+    border:none;
+    background:none;
+}
+
+/*
+Table styles
+*/
+table.memberSummary {
+    width:100%;
+    border-left:1px solid #EEE;
+    border-right:1px solid #EEE;
+    border-bottom:1px solid #EEE;
+    margin-bottom:12px;
+}
+table.memberSummary caption {
+    position:relative;
+    text-align:left;
+    background-repeat:no-repeat;
+    color:#253441;
+    font-weight:bold;
+    clear:none;
+    overflow:hidden;
+    padding:0px;
+    padding-top:10px;
+    padding-left:1px;
+    margin:0px;
+    white-space:pre;
+}
+table.memberSummary caption a:link, table.memberSummary caption a:visited {
+    color:#1f389c;
+}
+table.memberSummary caption span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    padding-bottom:7px;
+    display:inline-block;
+    float:left;
+    background-color:#F8981D;
+    border:none;
+    height:16px;
+}
+table.memberSummary caption span.activeTableTab span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-right:3px;
+    display:inline-block;
+    float:left;
+    background-color:#F8981D;
+    height:16px;
+}
+table.memberSummary caption span.tableTab span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-right:3px;
+    display:inline-block;
+    float:left;
+    background-color:#4D7A97;
+    height:16px;
+}
+table.memberSummary caption span.tableTab, table.memberSummary caption span.activeTableTab {
+    padding:0;
+    background:none;
+    height:auto;
+    margin-right:0;
+}
+table.memberSummary caption span.activeTableTab span a:link,
+table.memberSummary caption span.activeTableTab span a:visited {
+    color:#253441;
+}
+table.memberSummary caption span.tableTab span a:link, table.memberSummary caption span.tableTab span a:visited {
+    color:#FFFFFF;
+}
+table.memberSummary caption span.tabEnd, table.memberSummary caption span.activeTableTab span.tabEnd,
+table.memberSummary caption span.tableTab span.tabEnd {
+    display:none;
+}
+table.memberSummary th, table.memberSummary td {
+    text-align:left;
+    padding:0px 0px 12px 10px;
+}
+table.memberSummary th {
+    background:#dee3e9;
+    padding:8px 3px 3px 7px;
+}
+table.memberSummary td {
+    vertical-align:top;
+    padding-top:8px;
+}
+td.colFirst, th.colFirst {
+    white-space:nowrap;
+    font-size:13px;
+    width:12%;
+}
+td.colLast, th.colLast {
+    font-size:13px;
+}
+td.colFirst a:link, td.colFirst a:visited, td.colLast a:link, td.colLast a:visited {
+    font-weight:bold;
+}
+td.colLast code.sig {
+    font-weight:normal;
+    color:#4E4E4E;
+    font-size:13px;
+}
+.altColor { background-color:#FFFFFF; }
+.rowColor { background-color:#EEEEEF; }
+tr.hidden { display:none; }
+
+/*
+Content styles
+*/
+.description pre {
+    margin-top:0;
+}
+.deprecatedContent {
+    margin:0;
+    padding:10px 0;
+}
+.docSummary {
+    padding:0;
+}
+div.block {
+    font-size:14px;
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+}
+div.block p { margin:0 0 10px 0; }
+td.colLast div.block {
+    padding-top:0;
+}
+td.colLast div.block p { margin:0; }
+td.colLast div {
+    padding-top:0px;
+}
+div.block code {
+    font-size:14px;
+}
+ul.block {
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+    margin:0 0 10px 0;
+}
+.memberNameLink, .typeNameLink, .kindLabel, .paramLabel, .returnLabel,
+.throwsLabel, .exampleLabel {
+    font-weight:bold;
+}
+.emphasizedPhrase {
+    font-style:italic;
+}
+pre.codeBlock {
+    background-color:#f5f5f5;
+    border:1px solid #cccccc;
+    border-left:4px solid #4D7A97;
+    padding:8px 10px;
+    margin:6px 20px 12px 0;
+    overflow:auto;
+    line-height:1.35em;
+    font-size:13px;
+    color:#222222;
+}
+
+/*
+Guide pages
+*/
+.guide h3.sectionHeader {
+    font-style:normal;
+    color:#2c4557;
+    background-color:#dee3e9;
+    border:1px solid #d0d9e0;
+    padding:7px 5px;
+    margin:22px 0 10px 0;
+}
+.guide h3.sectionHeader:first-child { margin-top:0; }
+.guide div.block, .guide ul.block { max-width:860px; }
+.description h3.sectionHeader {
+    font-size:14px;
+    font-style:normal;
+}
+
+/*
+Narrow screens: hide the frames
+*/
+@media screen and (max-width:800px) {
+    .leftFrame { display:none; }
+    .rightFrame { margin-left:0; min-width:0; }
+}
